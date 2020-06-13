@@ -61,9 +61,9 @@
         android:background="@drawable/button"
         android:elevation="0dp"
         android:text="Buscar"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -71,8 +71,9 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="16dp"
         android:layout_marginTop="16dp"
-        android:gravity="center|top"
+        android:gravity="top|center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,18 +90,25 @@
             android:id="@+id/txtLogradouro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txtCidade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/txtBairro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
             android:textSize="16sp" />
 
         <TextView
