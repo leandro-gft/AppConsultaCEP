@@ -13,16 +13,16 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:src="@drawable/correios"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/correios" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
@@ -40,27 +40,41 @@
             android:id="@+id/formEndereco"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
-            <com.google.android.material.textfield.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/etLogradouro"
+                <Spinner
+                    android:id="@+id/spinnerTipos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Logradouro. Ex: Avenida Pauista" />
+                    android:layout_weight="6" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <EditText
+                        android:id="@+id/etLogradouro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Logradouro. Ex: Avenida Pauista" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,20 +94,13 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+                <Spinner
+                    android:id="@+id/spinnerUF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:layout_weight="7">
+                    android:layout_weight="3" />
 
-                    <EditText
-                        android:id="@+id/etUF"
-                        android:maxLength="2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="UF. Ex: SP" />
-
-                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
@@ -101,7 +108,9 @@
                 android:id="@+id/btnBuscar"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
+                android:layout_marginLeft="56dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginRight="56dp"
                 android:background="@drawable/button"
                 android:elevation="0dp"
                 android:text="Buscar"

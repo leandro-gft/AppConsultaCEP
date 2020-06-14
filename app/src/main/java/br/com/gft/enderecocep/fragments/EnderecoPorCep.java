@@ -1,18 +1,22 @@
 package br.com.gft.enderecocep.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import br.com.gft.enderecocep.MainActivity;
 import br.com.gft.enderecocep.R;
 import br.com.gft.enderecocep.api.CepService;
 import br.com.gft.enderecocep.model.Cep;
@@ -56,16 +60,22 @@ public class EnderecoPorCep extends Fragment {
             @Override
             public void onClick(View v) {
                 cep = etCep.getText().toString();
-                retrofit = new Retrofit.Builder()
-                        .baseUrl("https://viacep.com.br/ws/")
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build();
-                recuperarCepRetrofit();
+
+                if (cep.isEmpty()){
+                    Toast.makeText(getActivity(), "Preencha o campo CEP", Toast.LENGTH_SHORT).show();
+                } else {
+                    retrofit = new Retrofit.Builder()
+                            .baseUrl("https://viacep.com.br/ws/")
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
+                    recuperarCepRetrofit();
+                }
             }
         });
 
         return view;
     }
+
     private void recuperarCepRetrofit() {
 
         CepService cepService = retrofit.create(CepService.class);
@@ -82,13 +92,13 @@ public class EnderecoPorCep extends Fragment {
                     txCidade.setText("Localidade: " + cep.getLocalidade());
                     txUf.setText("UF: " + cep.getUf());
                 } else {
-                    txCep.setText("Erro: "+response.message());
+                    Toast.makeText(getActivity(), "Erro: "+response.message(), Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<Cep> call, Throwable t) {
-
+                Toast.makeText(getActivity(), "Erro: "+t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
 

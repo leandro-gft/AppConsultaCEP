@@ -13,16 +13,16 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:src="@drawable/correios"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/correios" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
@@ -49,7 +49,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:met_mask="#####-###"/>
+            app:met_mask="#####-###" />
 
         <Button
             android:id="@+id/button"

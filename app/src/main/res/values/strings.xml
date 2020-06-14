@@ -3,4 +3,84 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="lista_logradouro">
+        <item value="Tipo">Tipo</item>
+        <item value="Aeroporto">Aeroporto</item>
+        <item value="Alameda">Alameda</item>
+        <item value="Área">Área</item>
+        <item value="Avenida">Avenida</item>
+        <item value="Campo">Campo</item>
+        <item value="Chácara">Chácara</item>
+        <item value="Colônia">Colônia</item>
+        <item value="Condomínio">Condomínio</item>
+        <item value="Conjunto">Conjunto</item>
+        <item value="Distrito">Distrito</item>
+        <item value="Esplanada">Esplanada</item>
+        <item value="Estação">Estação</item>
+        <item value="Estrada">Estrada</item>
+        <item value="Favela">Favela</item>
+        <item value="Fazenda">Fazenda</item>
+        <item value="Feira">Feira</item>
+        <item value="Jardim">Jardim</item>
+        <item value="Ladeira">Ladeira</item>
+        <item value="Lago">Lago</item>
+        <item value="Lagoa">Lagoa</item>
+        <item value="Largo">Largo</item>
+        <item value="Loteamento">Loteamento</item>
+        <item value="Morro">Morro</item>
+        <item value="Núcleo">Núcleo</item>
+        <item value="Parque">Parque</item>
+        <item value="Passarela">Passarela</item>
+        <item value="Pátio">Pátio</item>
+        <item value="Praça">Praça</item>
+        <item value="Quadra">Quadra</item>
+        <item value="Recanto">Recanto</item>
+        <item value="Residencial">Residencial</item>
+        <item value="Rodovia">Rodovia</item>
+        <item value="Rua">Rua</item>
+        <item value="Setor">Setor</item>
+        <item value="Sítio">Sítio</item>
+        <item value="Travessa">Travessa</item>
+        <item value="Trecho">Trecho</item>
+        <item value="Trevo">Trevo</item>
+        <item value="Vale">Vale</item>
+        <item value="Vereda">Vereda</item>
+        <item value="Via">Via</item>
+        <item value="Viaduto">Viaduto</item>
+        <item value="Viela">Viela</item>
+        <item value="Vila">Vila</item>
+    </string-array>
+
+    <string-array name="lista_ufs">
+        <item>UF</item>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
+    </string-array>
+
 </resources>
